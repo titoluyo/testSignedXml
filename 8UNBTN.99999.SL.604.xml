@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ftc:FATCA_OECD version="1.1" xsi:schemaLocation="urn:oecd:ties:fatca:v1 FatcaXML_v1.1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ftc="urn:oecd:ties:fatca:v1" xmlns:sfa="urn:oecd:ties:stffatcatypes:v1">
+	<ftc:MessageSpec>
+		<sfa:SendingCompanyIN>8UNBTN.99999.SL.604</sfa:SendingCompanyIN>
+		<sfa:TransmittingCountry>PE</sfa:TransmittingCountry>
+		<sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+		<sfa:MessageType>FATCA</sfa:MessageType>
+		<sfa:Warning></sfa:Warning>
+		<sfa:MessageRefId>PE20425724119-2015-001</sfa:MessageRefId>
+		<sfa:ReportingPeriod>2015-07-31</sfa:ReportingPeriod>
+		<sfa:Timestamp>2015-07-31T18:02:20</sfa:Timestamp>
+	</ftc:MessageSpec>
+	<ftc:FATCA>
+		<ftc:ReportingFI>
+			<sfa:ResCountryCode>PE</sfa:ResCountryCode>
+			<sfa:TIN>20425724119</sfa:TIN>
+			<sfa:Name >EDPYME RAIZ</sfa:Name>
+			<sfa:Address>
+				<sfa:CountryCode>PE</sfa:CountryCode>
+				<sfa:AddressFree>CALLE LOS CISNES 222 SAN ISIDRO LIMA - PERU</sfa:AddressFree>
+			</sfa:Address>
+			<ftc:DocSpec>
+				<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+				<ftc:DocRefId>PE20425724119-20150731-001</ftc:DocRefId>
+			</ftc:DocSpec>
+		</ftc:ReportingFI>
+		<ftc:ReportingGroup>
+		</ftc:ReportingGroup>
+	</ftc:FATCA>
+</ftc:FATCA_OECD>

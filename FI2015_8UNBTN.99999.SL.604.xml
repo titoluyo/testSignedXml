@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?><Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+		<SignedInfo>
+			<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+			<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+			<Reference URI="#FATCA">
+				<Transforms>
+					<Transform Algorithm="http://www.altova.com/xml-signatures/strip-whitespaces"/>
+					<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+					<Transform Algorithm="http://www.w3.org/2006/12/xml-c14n11"/>
+				</Transforms>
+				<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+				<DigestValue>sSFPwH63borGLWNne8T+Q9spwqE=</DigestValue>
+			</Reference>
+		</SignedInfo>
+		<SignatureValue>jO6GNVL4WQ4hWETl7CVa1T7TyMSTiXBBYBDnnSVTZpc0ZpvYCdallSuRhDF4M5SQNjUbHndrAiinyq/QB+Oh8yschLMRhDknthfPsLSkxgpRsHs7FVme5Rq9MIe+c0kVrUuKdqDd9PxKNQpvNJ5uWXIC30wGuyk9V5pSwf2JvOx5XFv/SiBBrvfnzgSDCuL4jo7Vl0SE7LBzKb1V/RA2ocE35jWvd7Gq+sMQHt7+qwvInW9VlShcR95yVtrGc/ijuuHCvUu/8RoXcuG7keE57zo7zWvOM6VlhLjr7COhQwZ7NuCbvHCFFTQyW3zQ29n30svGmi29o3fofafkwuAmIg==
+		</SignatureValue>
+		<KeyInfo>
+			<KeyValue>
+				<RSAKeyValue>
+					<Modulus>vUZHlXZH42ul3ZVtaiUDr2p1jnhei7kn3LmMdBpz3djhMFmd7yPkR6fP+6qG8H2oBwa46o/Xr8I4P/YV91KzvFkkfKn6CC4TJDtOTq6fG/o+akUFw8y8IiuRMkmO3cOw7v5hUkVd1URufOZMuTQycv6zKWCq4SrXmxpXbVc1t7kYY+oi69gZf/oPNZH8ZQ2cGMZbC8Jb1gr/r82ffcmdQu9xGlFZyUmxbb63lipFJ+TQ83qe77yd+kzzBytkObaOK9nsxQ0rkQ4DfO6h/InvmNfA9Cxf1jzJy/06Q30mV16qeQY0i4G+uLHX3LUDyf8hsk+IunY+h5eQMPnB34nkFw==</Modulus>
+					<Exponent>AAEAAQ==</Exponent>
+				</RSAKeyValue>
+			</KeyValue>
+			<X509Data>
+				<X509Certificate>MIICqjCCAZKgAwIBAgIQALA+UKpZqGfq4uF8CzQxLzANBgkqhkiG9w0BAQsFADAR
+				MQ8wDQYDVQQDDAZSYWl6MTAwHhcNMTUwODA2MTc0MTMyWhcNMTYwODIwMTc0MTMy
+				WjARMQ8wDQYDVQQDDAZSYWl6MTAwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEK
+				AoIBAQC9RkeVdkfja6XdlW1qJQOvanWOeF6LuSfcuYx0GnPd2OEwWZ3vI+RHp8/7
+				qobwfagHBrjqj9evwjg/9hX3UrO8WSR8qfoILhMkO05Orp8b+j5qRQXDzLwiK5Ey
+				SY7dw7Du/mFSRV3VRG585ky5NDJy/rMpYKrhKtebGldtVzW3uRhj6iLr2Bl/+g81
+				kfxlDZwYxlsLwlvWCv+vzZ99yZ1C73EaUVnJSbFtvreWKkUn5NDzep7vvJ36TPMH
+				K2Q5to4r2ezFDSuRDgN87qH8ie+Y18D0LF/WPMnL/TpDfSZXXqp5BjSLgb64sdfc
+				tQPJ/yGyT4i6dj6Hl5Aw+cHfieQXAgMBAAEwDQYJKoZIhvcNAQELBQADggEBAHbO
+				kyB5ZyMnrVP5gm/T5nCYUCHu56Qr6qTduK/jHGUNLbUwqLvLry8pK1VqsOUkaVbN
+				oI5c+j9MoXqe9LfZ+XDG2PU//Uh0qMqhpXrEgcxdM2lg5hgebEUyRjmuSj9fNKDM
+				PucO21fteU9qK0nPxvccdF0g++neSF7HzFxKmrPH1oiGibdPtlUFGzbhJwkrVUB/
+				R8Ywa/wYBNE5AP32hULDJjl4QKagWp5Bw8wSFztV+puUgPxBNOeyprko2nHs6h+L
+				fGw0SuEop07JqLT24i8724oSZ9nLZYZwDAe3UR2O0eGF875KR7jlmIWcVgHTYpyK
+				I2xS9GY91aaJ42tXkhw=
+				</X509Certificate>
+			</X509Data>
+		</KeyInfo>
+	<Object Id="FATCA">		
+	<ftc:FATCA_OECD version="1.1" xsi:schemaLocation="urn:oecd:ties:fatca:v1 FatcaXML_v1.1.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ftc="urn:oecd:ties:fatca:v1" xmlns:sfa="urn:oecd:ties:stffatcatypes:v1">
+		<ftc:MessageSpec>
+			<sfa:SendingCompanyIN>8UNBTN.99999.SL.604</sfa:SendingCompanyIN>
+			<sfa:TransmittingCountry>PE</sfa:TransmittingCountry>
+			<sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+			<sfa:MessageType>FATCA</sfa:MessageType>
+			<sfa:Warning/>
+			<sfa:MessageRefId>PE20425724119-2015-001</sfa:MessageRefId>
+			<sfa:ReportingPeriod>2015-07-31</sfa:ReportingPeriod>
+			<sfa:Timestamp>2015-07-31T18:02:20</sfa:Timestamp>
+		</ftc:MessageSpec>
+		<ftc:FATCA>
+			<ftc:ReportingFI>
+				<sfa:ResCountryCode>PE</sfa:ResCountryCode>
+				<sfa:TIN>20425724119</sfa:TIN>
+				<sfa:Name>EDPYME RAIZ</sfa:Name>
+				<sfa:Address>
+					<sfa:CountryCode>PE</sfa:CountryCode>
+					<sfa:AddressFree>CALLE LOS CISNES 222 SAN ISIDRO LIMA - PERU</sfa:AddressFree>
+				</sfa:Address>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA11</ftc:DocTypeIndic>
+					<ftc:DocRefId>PE20425724119-20150731-001</ftc:DocRefId>
+				</ftc:DocSpec>
+			</ftc:ReportingFI>
+			<ftc:ReportingGroup>
+			</ftc:ReportingGroup>
+		</ftc:FATCA>
+	</ftc:FATCA_OECD>
+	</Object>
+</Signature>
