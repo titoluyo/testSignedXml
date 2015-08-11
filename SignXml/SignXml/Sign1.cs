@@ -71,9 +71,11 @@ namespace SignXml
             thumbPrint = Regex.Replace(thumbPrint, @"\s+", "").Remove(0,1);
             Console.WriteLine(thumbPrint);
 
+            X509Certificate2 card = null;
+            card = new X509Certificate2(@"D:\Fuentes\testSignedXml\TestPacket\SenderCert\sender.p12", "password");
+            /*
             X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly);
-            X509Certificate2 card = null;
             Console.WriteLine("Cantidad:{0}", store.Certificates.Count);
             foreach (X509Certificate2 cert in store.Certificates)
             {
@@ -87,6 +89,7 @@ namespace SignXml
                 }
             }
             store.Close();
+            */
 
             return card;
         }

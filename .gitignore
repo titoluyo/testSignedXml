@@ -8,7 +8,10 @@ Thumbs.db
 # Folder config file
 Desktop.ini
 
+################
 #Visual Studio
+################
 *.suo
+*.user
 bin/
 obj/

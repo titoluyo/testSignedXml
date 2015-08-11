@@ -11,7 +11,7 @@ namespace SignXml
     {
         static void Main(string[] args)
         {
-            String strFile = @"D:\Fuentes\RSA\TestPacket\000000.00000.TA.124.xml";
+            String strFile = @"D:\Fuentes\testSignedXml\TestPacket\000000.00000.TA.124.xml";
             XmlDocument doc = new XmlDocument();
             doc.PreserveWhitespace = true;
             doc.Load(new XmlTextReader(strFile));
