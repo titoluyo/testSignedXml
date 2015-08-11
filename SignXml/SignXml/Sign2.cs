@@ -86,14 +86,19 @@ namespace SignXml
 
         private static X509Certificate2 GetCertificate()
         {
-            String thumbPrint = "‎44 d5 b4 cf d1 1e b9 e6 37 9c ea 29 8c 71 c8 a6 92 10 db 39";
+            //Sample testPacket
+            //String thumbPrint = "‎44 d5 b4 cf d1 1e b9 e6 37 9c ea 29 8c 71 c8 a6 92 10 db 39";
+            //Certificado Ejemplo Raiz
+            String thumbPrint = "‎da c8 62 b8 0a d2 ec cc e6 fb 6c 62 f3 ae 45 a0 2e 57 1a 9d";
             thumbPrint = Regex.Replace(thumbPrint, @"\s+", "").Remove(0, 1);
             Console.WriteLine(thumbPrint);
 
             X509Certificate2 card = null;
-            card = new X509Certificate2(@"D:\Fuentes\testSignedXml\TestPacket\SenderCert\sender.p12", "password", X509KeyStorageFlags.Exportable);
+            //card = new X509Certificate2(@"D:\Fuentes\testSignedXml\TestPacket\SenderCert\sender.p12", "password", X509KeyStorageFlags.Exportable);
+            card = new X509Certificate2(@"D:\Fuentes\testSignedXml\Raiz.pfx", "raizperu", X509KeyStorageFlags.Exportable);
+            //card = new X509Certificate2(@"D:\Fuentes\testSignedXml\EDPYME RAIZ S.A. RUC 2042572411900-2048-SHA256withRSA.pfx", "raizperu", X509KeyStorageFlags.Exportable);
             /*
-            X509Store store = new X509Store(StoreName.My, StoreLocation.CurrentUser);
+            X509Store store = new X509Store(StoreName.TrustedPublisher, StoreLocation.CurrentUser);
             store.Open(OpenFlags.ReadOnly);
             Console.WriteLine("Cantidad:{0}", store.Certificates.Count);
             foreach (X509Certificate2 cert in store.Certificates)
