@@ -1,0 +1,5 @@
+﻿<xml>
+  <signed id='tag1'>Signed Data</signed>
+  <unsigned id='tag2'>Unsigned Data</unsigned>
+  <signed id='tag3'>More Signed Data</signed>
+</xml>

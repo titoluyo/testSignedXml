@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Deployment.Internal.CodeSigning;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
@@ -12,63 +13,81 @@ using System.Xml;
 
 namespace SignXml
 {
-    public class Sign1
+    public class Sign2
     {
-        public static XmlDocument SignDocument(XmlDocument doc)
+        public static void Sign(XmlDocument doc)
         {
-            ////////////////
             string signatureCanonicalizationMethod = "http://www.w3.org/2001/10/xml-exc-c14n#";
             string signatureMethod = @"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256";
             string digestMethod = @"http://www.w3.org/2001/04/xmlenc#sha256";
 
-            string signatureReferenceURI = "#_73e63a41-156d-4fda-a26c-8d79dcade713";
-
             CryptoConfig.AddAlgorithm(typeof(RSAPKCS1SHA256SignatureDescription), signatureMethod);
 
             X509Certificate2 signingCertificate = GetCertificate();
-            //
-            /* add the following lines of code after var signingCertificate = GetCertificate();*/
+
+
+            SignedXml signer = new SignedXml(doc);
+
             CspParameters cspParams = new CspParameters(24);
-            //cspParams.KeyContainerName = "XML_DISG_RSA_KEY";
+            cspParams.KeyContainerName = "XML_DISG_RSA_KEY";
+
             RSACryptoServiceProvider key = new RSACryptoServiceProvider(cspParams);
             var strKey = signingCertificate.PrivateKey.ToXmlString(true);
             key.FromXmlString(strKey);
-            /*assign the new key to signer's SigningKey */
-            //metadataSigner.SigningKey = key;
 
-            //
-            SignedXml signer = new SignedXml(doc);
-            signer.SigningKey = key;//signingCertificate.PrivateKey;
+            signer.SigningKey = key;
             signer.KeyInfo = new KeyInfo();
             signer.KeyInfo.AddClause(new KeyInfoX509Data(signingCertificate));
 
             signer.SignedInfo.CanonicalizationMethod = signatureCanonicalizationMethod;
             signer.SignedInfo.SignatureMethod = signatureMethod;
 
-            XmlDsigEnvelopedSignatureTransform envelopeTransform = new XmlDsigEnvelopedSignatureTransform();
+            //XmlDsigEnvelopedSignatureTransform envelopeTransform = new XmlDsigEnvelopedSignatureTransform();
             XmlDsigExcC14NTransform cn14Transform = new XmlDsigExcC14NTransform();
 
             Reference signatureReference = new Reference("#FATCA");
-            signatureReference.Uri = signatureReferenceURI;
-            signatureReference.AddTransform(envelopeTransform);
+            //signatureReference.Uri = signatureReferenceURI;
+            //signatureReference.AddTransform(envelopeTransform);
             signatureReference.AddTransform(cn14Transform);
             signatureReference.DigestMethod = digestMethod;
 
             signer.AddReference(signatureReference);
+            //signer.AddReference(new Reference("#tag1"));
+            //signer.AddReference(new Reference("#tag3"));
 
             signer.ComputeSignature();
+
             XmlElement signatureElement = signer.GetXml();
+            String strDoc = signatureElement.OuterXml;
+            XmlDocument docResult = new XmlDocument();
+            docResult.LoadXml(strDoc);
+            //XmlElement obj = docResult.CreateElement("Object",docResult.FirstChild.NamespaceURI);
+            //obj.SetAttribute("Id", "FACTA");
 
-            doc.DocumentElement.AppendChild(signer.GetXml());
+            XmlDocumentFragment xfrag = docResult.CreateDocumentFragment();
+            xfrag.InnerXml = doc.OuterXml;
+            //obj.AppendChild(xfrag);
+            //docResult.DocumentElement.AppendChild(obj);
+            docResult.DocumentElement.AppendChild(xfrag);
 
-            return doc;
+            //doc.DocumentElement.AppendChild(signer.GetXml());
+
+            XmlWriterSettings settings = new XmlWriterSettings();
+            settings.OmitXmlDeclaration = false;
+            settings.Indent = true;
+
+            var writer = XmlWriter.Create("output1.xml", settings);
+            docResult.Save(writer);
+            //docResult.Save("output.xml");
+
+            Console.WriteLine("Namespace:{0}",docResult.FirstChild.NamespaceURI);
+            //Console.ReadLine();
         }
-
 
         private static X509Certificate2 GetCertificate()
         {
             String thumbPrint = "‎44 d5 b4 cf d1 1e b9 e6 37 9c ea 29 8c 71 c8 a6 92 10 db 39";
-            thumbPrint = Regex.Replace(thumbPrint, @"\s+", "").Remove(0,1);
+            thumbPrint = Regex.Replace(thumbPrint, @"\s+", "").Remove(0, 1);
             Console.WriteLine(thumbPrint);
 
             X509Certificate2 card = null;
