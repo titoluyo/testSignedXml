@@ -6,6 +6,7 @@ Imports System.ServiceModel.Security
 Imports System.Text
 Imports System.Xml.Linq
 Imports System.Xml.Serialization
+Imports System.Security.Cryptography.Xml
 
 
 Module Module1
