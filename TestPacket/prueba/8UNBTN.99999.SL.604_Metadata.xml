@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FATCAIDESSenderFileMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:fatca:idessenderfilemetadata">
+	<FATCAEntitySenderId>8UNBTN.99999.SL.604</FATCAEntitySenderId>
+	<FATCAEntityReceiverId>000000.00000.TA.840</FATCAEntityReceiverId>
+	<FATCAEntCommunicationTypeCd>RPT</FATCAEntCommunicationTypeCd>
+	<SenderFileId>20150827T182224147Z_8UNBTN.99999.SL.604</SenderFileId>
+	<FileCreateTs>2015-08-27T13:22:24Z</FileCreateTs>
+	<TaxYear>2014</TaxYear>
+	<FileRevisionInd>false</FileRevisionInd>
+</FATCAIDESSenderFileMetadata>
