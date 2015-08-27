@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><Signature xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"/><Reference URI="#FATCA"><Transforms><Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha256"/><DigestValue>kMIuNa6QDhA8ilh86uHLUV7XPJifsrEUVIY9X5pr21Y=</DigestValue></Reference></SignedInfo><SignatureValue>p2mbPIHkYhznOGCwuRo1QhtLHZRlzCS+EkjUpgKGLF3M25V1qqE17x8Goqi3UMV2Wf5EsLU9TTvg
+3jnO1MTK0PdGLJgEYr11SbQCmJgEtzVW1wyvJEI6e7+uoA6p2edpAKYriN4bjzwQG6APHa7bjkMQ
+Uw3KIihuL4lrVGACu9+vx1deRkGuIYDBrUoTxl0qIAoShiRyjdgmxggpRNXaxd9UmqdjNAwDPYeD
+CgOcJH9EZtah6frxpO5HCDtIpZp/bK+gT5mD09VW8K7z1Y97VzMcKzMWkSQAZUkRpIp73jWrfwd0
+sfI1my59LyASlhWo5/XWfiC9BqLU/ioRcXsE5A==</SignatureValue><KeyInfo><X509Data><X509Certificate>MIIC6DCCAlECAxAAAjANBgkqhkiG9w0BAQQFADCBqTEOMAwGA1UEChMFU1VOQVQxGDAWBgNVBAsT
+D1JVQzoyMDEzMTMxMjk1NTEmMCQGCSqGSIb3DQEJARYXZGVzcGlub3phcEBzdW5hdC5nb2IucGUx
+EzARBgNVBAcTClNhbiBJc2lkcm8xDTALBgNVBAgTBExpbWExCzAJBgNVBAYTAlBFMSQwIgYDVQQD
+ExtTVU5BVCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMTUwODEwMDExMDUyWhcNMTYwODA5MDEx
+MDUyWjBJMQswCQYDVQQGEwJQRTENMAsGA1UECBMETGltYTEOMAwGA1UEChMFU1VOQVQxDTALBgNV
+BAsTBERHUFMxDDAKBgNVBAMTA0RFUDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAO/a
+WNUC4Ie9kkv/ukRM2dlSR9Sz1IEa4v9TH+mzLiqmpWkEb2zCxFRMSFvJpAs1Gl29+IOxSwOZzcNJ
+Zta0h88FOo0YVWAnKMyMRG1M2sBrcdNhU8lU12C0CVlxaOIywyQ2u3GgustUOPZFCmoTvQD4y7DI
+uSOd/22XwwlGlWF9/813Gx0lKR8rHVDL/ZRtR4UkKJKlWs5OuxwXRxInOF+Eof59iLLvkiB6K5VA
+IiHCujTSzxXzgHt8sCFHP5koimZc4/5pn7b0jwrWkmz1BFPoEkksuM5kdP1VI6Cgn3725XGBobLA
+maB/xG5L3saYCUsZCd3r+2Z13AuEq0FAGCsCAwEAATANBgkqhkiG9w0BAQQFAAOBgQAE8XjOVI7j
+pOf3+lSSAS7eLbLq3ASqcnBIe5DDNbVdc4kA9c99Wtxyh4lI8FPZdMuFr4MEYGwbFF8hhESRdLNy
+viiOsqDlXlM5oyUO/K80eLxZTEGLTgYHWmNIzIo9+tslfxk189n/2U3gOz4+j6KgtScIubH5zgni
+xXd7SEBTnQ==</X509Certificate></X509Data></KeyInfo><Object Id="FATCA"><ftc:FATCA_OECD xmlns="urn:oecd:ties:fatca:v1" xmlns:ftc="urn:oecd:ties:fatca:v1" xmlns:iso="urn:oecd:ties:isofatcatypes:v1" xmlns:sfa="urn:oecd:ties:stffatcatypes:v1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.1">
+	<ftc:MessageSpec>
+		<sfa:SendingCompanyIN>000000.00000.TA.603</sfa:SendingCompanyIN>
+		<sfa:TransmittingCountry>PE</sfa:TransmittingCountry>
+		<sfa:ReceivingCountry>US</sfa:ReceivingCountry>
+		<sfa:MessageType>FATCA</sfa:MessageType>
+		<sfa:Warning/>
+		<sfa:Contact>SUNAT TEST</sfa:Contact>
+		<sfa:MessageRefId/>
+		<sfa:ReportingPeriod>2015-12-31</sfa:ReportingPeriod>
+		<sfa:Timestamp>2015-06-30T20:22:03</sfa:Timestamp>
+	</ftc:MessageSpec>
+	<ftc:FATCA>
+		<ftc:ReportingFI>
+			<sfa:ResCountryCode>PE</sfa:ResCountryCode>
+			<sfa:TIN issuedBy="US">000000.00000.TA.603</sfa:TIN>
+			<sfa:Name>SUNAT</sfa:Name>
+			<sfa:Address>
+				<sfa:CountryCode>PE</sfa:CountryCode>
+				<sfa:AddressFix>
+					<sfa:Street>AV. Garcilazo de la Vega </sfa:Street>
+					<sfa:BuildingIdentifier>156</sfa:BuildingIdentifier>
+					<sfa:FloorIdentifier>1</sfa:FloorIdentifier>
+					<sfa:DistrictName>LIMA</sfa:DistrictName>
+					<sfa:City>LIMA</sfa:City>
+					<sfa:CountrySubentity>LIMA</sfa:CountrySubentity>
+				</sfa:AddressFix>
+			</sfa:Address>
+			<ftc:DocSpec>
+				<ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+				<ftc:DocRefId>b35d0631-e245-44d9-b8d4-a7708f44940e</ftc:DocRefId>
+				<ftc:CorrMessageRefId/>
+				<ftc:CorrDocRefId/>
+			</ftc:DocSpec>
+		</ftc:ReportingFI>
+		<ftc:ReportingGroup>
+			<ftc:AccountReport>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+					<ftc:DocRefId>c78138e0-0a55-4ab8-a737-b8b90910766f</ftc:DocRefId>
+					<ftc:CorrMessageRefId/>
+					<ftc:CorrDocRefId/>
+				</ftc:DocSpec>
+				<ftc:AccountNumber>12900211000004008129</ftc:AccountNumber>
+				<ftc:AccountHolder>
+					<ftc:Individual>
+						<sfa:ResCountryCode>US</sfa:ResCountryCode>
+						<sfa:TIN issuedBy="US">768-12-3456</sfa:TIN>
+						<sfa:Name>
+							<sfa:FirstName>ADAM</sfa:FirstName>
+							<sfa:LastName>SANDLER</sfa:LastName>
+						</sfa:Name>
+						<sfa:Address>
+							<sfa:CountryCode>PE</sfa:CountryCode>
+							<sfa:AddressFree>CALLE RECUERDOS  CHACARILLA - SAN BORJA - LIMA</sfa:AddressFree>
+						</sfa:Address>
+						<sfa:Nationality>US</sfa:Nationality>
+						<sfa:BirthInfo>
+							<sfa:BirthDate>1980-04-10</sfa:BirthDate>
+						</sfa:BirthInfo>
+					</ftc:Individual>
+				</ftc:AccountHolder>
+				<ftc:SubstantialOwner>
+					<sfa:ResCountryCode>US</sfa:ResCountryCode>
+					<sfa:TIN issuedBy="US">768-12-3456</sfa:TIN>
+					<sfa:Name>
+						<sfa:FirstName>ARIANA</sfa:FirstName>
+						<sfa:LastName>GRANDE</sfa:LastName>
+					</sfa:Name>
+					<sfa:Address>
+						<sfa:CountryCode>PE</sfa:CountryCode>
+						<sfa:AddressFree>CALLE RECUERDOS 2 CHACARILLA - SAN BORJA - LIMA</sfa:AddressFree>
+					</sfa:Address>
+					<sfa:Nationality>US</sfa:Nationality>
+					<sfa:BirthInfo>
+						<sfa:BirthDate>1980-04-10</sfa:BirthDate>
+					</sfa:BirthInfo>
+				</ftc:SubstantialOwner>
+				<ftc:AccountBalance currCode="USD">61573.84</ftc:AccountBalance>
+				<ftc:Payment>
+					<ftc:Type>FATCA502</ftc:Type>
+					<ftc:PaymentAmnt currCode="USD">11473.84</ftc:PaymentAmnt>
+				</ftc:Payment>
+			</ftc:AccountReport>
+			<ftc:AccountReport>
+				<ftc:DocSpec>
+					<ftc:DocTypeIndic>FATCA1</ftc:DocTypeIndic>
+					<ftc:DocRefId>f137ccc0-43ab-4145-aed9-751a15f27eda</ftc:DocRefId>
+					<ftc:CorrMessageRefId/>
+					<ftc:CorrDocRefId/>
+				</ftc:DocSpec>
+				<ftc:AccountNumber>12900211000004008227</ftc:AccountNumber>
+				<ftc:AccountHolder>
+					<ftc:Individual>
+						<sfa:ResCountryCode>US</sfa:ResCountryCode>
+						<sfa:TIN issuedBy="US">123-02-1111</sfa:TIN>
+						<sfa:Name>
+							<sfa:FirstName>ARIANA</sfa:FirstName>
+							<sfa:LastName>HILTON</sfa:LastName>
+						</sfa:Name>
+						<sfa:Address>
+							<sfa:CountryCode>PE</sfa:CountryCode>
+							<sfa:AddressFree>CALLE RECUERDOS 3 CHACARILLA - SAN BORJA - LIMA</sfa:AddressFree>
+						</sfa:Address>
+						<sfa:Nationality>US</sfa:Nationality>
+						<sfa:BirthInfo>
+							<sfa:BirthDate>1980-04-10</sfa:BirthDate>
+						</sfa:BirthInfo>
+					</ftc:Individual>
+				</ftc:AccountHolder>
+				<ftc:SubstantialOwner>
+					<sfa:ResCountryCode>US</sfa:ResCountryCode>
+					<sfa:TIN issuedBy="US">123-02-1111</sfa:TIN>
+					<sfa:Name>
+						<sfa:FirstName>ARIANA</sfa:FirstName>
+						<sfa:LastName>HILTON</sfa:LastName>
+					</sfa:Name>
+					<sfa:Address>
+						<sfa:CountryCode>PE</sfa:CountryCode>
+						<sfa:AddressFree>CALLE RECUERDOS 3 - CHACARILLA - SAN BORJA - LIMA</sfa:AddressFree>
+					</sfa:Address>
+					<sfa:Nationality>US</sfa:Nationality>
+					<sfa:BirthInfo>
+						<sfa:BirthDate>1980-04-10</sfa:BirthDate>
+					</sfa:BirthInfo>
+				</ftc:SubstantialOwner>
+				<ftc:AccountBalance currCode="USD">61993.86</ftc:AccountBalance>
+				<ftc:Payment>
+					<ftc:Type>FATCA502</ftc:Type>
+					<ftc:PaymentAmnt currCode="USD">11893.86</ftc:PaymentAmnt>
+				</ftc:Payment>
+			</ftc:AccountReport>
+		</ftc:ReportingGroup>
+	</ftc:FATCA>
+</ftc:FATCA_OECD></Object></Signature>
