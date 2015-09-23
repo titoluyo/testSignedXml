@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -15,11 +16,26 @@ namespace SignXml
             //String strFile = @"D:\Fuentes\testSignedXml\TestPacket\000000.00000.TA.124.xml";
             //String strFile = @"test1.xml";
             String strFile = @"D:\Fuentes\testSignedXml\8UNBTN.99999.SL.604.xml";
-            XmlDocument doc = new XmlDocument();
-            doc.PreserveWhitespace = true;
+            var doc = new XmlDocument {PreserveWhitespace = true};
             doc.Load(new XmlTextReader(strFile));
 
+
             doc = RemoveHeader(doc);
+
+            Debug.Assert(doc.DocumentElement != null, "doc.DocumentElement != null");
+            doc.DocumentElement.Attributes.Append(doc.CreateAttribute("pp")).Value = "asdasdasfd";
+
+            //XmlNamespaceManager nsMgr = new XmlNamespaceManager(doc.NameTable);
+            //nsMgr.AddNamespace("app", "http://www.raizperu.com");
+            //nsMgr.PushScope();
+            //var x = doc.SelectSingleNode("/", nsMgr);
+
+            var settings = new XmlWriterSettings();
+            settings.OmitXmlDeclaration = false;
+            settings.Indent = true;
+
+            var writer = XmlWriter.Create("prueba1.xml", settings);
+            doc.Save(writer);
 
             //Sign1.SignDocument(doc);
             Sign2.Sign(doc);

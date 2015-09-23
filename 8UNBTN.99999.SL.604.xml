@@ -5,7 +5,7 @@
 		<sfa:TransmittingCountry>PE</sfa:TransmittingCountry>
 		<sfa:ReceivingCountry>US</sfa:ReceivingCountry>
 		<sfa:MessageType>FATCA</sfa:MessageType>
-		<sfa:Warning></sfa:Warning>
+		<sfa:Warning />
 		<sfa:MessageRefId>PE20425724119-2015-001</sfa:MessageRefId>
 		<sfa:ReportingPeriod>2015-07-31</sfa:ReportingPeriod>
 		<sfa:Timestamp>2015-07-31T18:02:20</sfa:Timestamp>

@@ -83,6 +83,11 @@ namespace WindowsFormsApplication1
 
                 // save enveloping version to disk
                 File.WriteAllBytes(envelopingFileName, envelopingSignature);
+                
+                // Crea archivo adicional de output con el mismo nombre
+                var pathOutput = Path.Combine(filePath, "output");
+                if (!Directory.Exists(pathOutput)) Directory.CreateDirectory(pathOutput);
+                File.WriteAllBytes(Path.Combine(pathOutput, Path.GetFileName(txtXmlFile.Text)), envelopingSignature);
 
                 // add enveloping signature to ZIP file
                 ZipManager.CreateArchive(envelopingFileName, zipFileName);
@@ -152,7 +157,7 @@ namespace WindowsFormsApplication1
                     writer.WriteString(fileCreationDateTime);
                     writer.WriteEndElement();
                     writer.WriteStartElement("TaxYear");
-                    writer.WriteString("2014");
+                    writer.WriteString("2015");
                     writer.WriteEndElement();
                     writer.WriteStartElement("FileRevisionInd");
                     writer.WriteString("false");
